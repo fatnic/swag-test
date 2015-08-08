@@ -12,6 +12,4 @@ private:
     sf::Texture texture;
 protected:
     float speed;
-
-
 };

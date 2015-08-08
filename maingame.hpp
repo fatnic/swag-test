@@ -11,7 +11,7 @@ public:
   MainGame(Game* game);
   virtual void draw();
   void handleInput();
-  virtual void update();
+  virtual void update(sf::Time dT);
 private:
   Player player;
   Guard guard;

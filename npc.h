@@ -8,7 +8,7 @@ class NPC : public Entity
 public:
     NPC();
     void setTarget(sf::Vector2f target);
-    void doMove();
+    void doMove(sf::Time dT);
 private:
     sf::Vector2f target;
 };

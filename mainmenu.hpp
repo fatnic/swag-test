@@ -9,7 +9,7 @@ public:
 
   MainMenu(Game *game);
   virtual void draw();
-  virtual void update();
+  virtual void update(sf::Time dt);
   void handleInput();
 private:
   void loadGame();

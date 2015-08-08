@@ -31,7 +31,7 @@ void MainMenu::draw()
     return;
 }
 
-void MainMenu::update()
+void MainMenu::update(sf::Time dt)
 {
 
 }

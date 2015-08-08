@@ -31,7 +31,7 @@ void Pause::draw()
     return;
 }
 
-void Pause::update()
+void Pause::update(sf::Time dT)
 {
 
 }

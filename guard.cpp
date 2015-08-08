@@ -6,9 +6,9 @@ Guard::Guard()
   this->boost = false;
 }
 
-void Guard::update()
+void Guard::update(sf::Time dT)
 {
-  this->doMove();
+  this->doMove(dT);
 }
 
 

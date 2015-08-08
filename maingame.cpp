@@ -9,7 +9,7 @@ MainGame::MainGame(Game* game)
     this->player.setPosition(this->game->window.getSize().x / 2, this->game->window.getSize().y / 2);
 
     this->guard.load("assets/guard.png");
-    this->guard.setPosition(760, 10);
+    this->guard.setPosition(400, 100);
 }
 
 void MainGame::draw()
@@ -42,9 +42,9 @@ void MainGame::handleInput()
   return;
 }
 
-void MainGame::update()
+void MainGame::update(sf::Time dT)
 {
-  this->player.update();
+  this->player.update(dT);
   this->guard.setTarget(this->player.getPosition());
-  this->guard.update();
+  this->guard.update(dT);
 }

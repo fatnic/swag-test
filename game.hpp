@@ -17,7 +17,7 @@ public:
     GameState* peekState();
 
     void gameLoop();
-
+    sf::Time dT;
     Game();
     ~Game();
 };

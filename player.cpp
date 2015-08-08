@@ -3,13 +3,12 @@
 
 Player::Player()
 {
-    this->boost = false;
+  this->boost = false;
 
   this->movingUp = false;
   this->movingDown = false;
   this->movingLeft = false;
   this->movingRight = false;
-
 }
 
 void Player::handleInput()
@@ -25,6 +24,7 @@ void Player::handleInput()
 
 void Player::doMove()
 {
+
   if (this->movingUp && this->movingRight)
     {
       this->move(speed, -speed);
@@ -67,9 +67,9 @@ void Player::doMove()
     }
 }
 
-void Player::update()
+void Player::update(sf::Time dT)
 {
-  this->speed = (this->boost) ? 1.5f : 1.f;
+  this->speed = (this->boost) ? 150.f * dT.asSeconds() : 100.f * dT.asSeconds();
   this->doMove();
 }
 

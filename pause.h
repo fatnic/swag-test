@@ -9,7 +9,7 @@ public:
 
   Pause(Game *game);
   virtual void draw();
-  virtual void update();
+  virtual void update(sf::Time dT);
   void handleInput();
 private:
   void exitGame();

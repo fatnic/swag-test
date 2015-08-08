@@ -8,7 +8,7 @@ class Player : public Entity
 public:
   Player();
   void handleInput();
-  void update();
+  void update(sf::Time dT);
   void doMove();
 private:
   bool movingUp;

@@ -6,7 +6,7 @@ class Guard : public NPC
 {
 public:
     Guard();
-    void update();
+    void update(sf::Time dT);
 private:
   bool boost;
 };
