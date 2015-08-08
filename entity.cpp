@@ -17,3 +17,13 @@ Entity::~Entity()
 {
 }
 
+sf::RectangleShape Entity::getHitbox()
+{
+  this->hitbox = sf::RectangleShape(sf::Vector2f(this->getLocalBounds().width, this->getLocalBounds().height));
+  this->hitbox.setOrigin(this->getOrigin());
+  this->hitbox.setRotation(this->getRotation());
+  this->hitbox.setFillColor(sf::Color(120,0,0,150));
+  this->hitbox.setPosition(this->getPosition());
+  return this->hitbox;
+}
+

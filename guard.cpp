@@ -11,6 +11,11 @@ void Guard::update(sf::Time dT)
   this->doMove(dT);
 }
 
+bool Guard::hitPlayer(Player player)
+{
+  return (this->getGlobalBounds().intersects(player.getGlobalBounds()));
+}
+
 
 
 

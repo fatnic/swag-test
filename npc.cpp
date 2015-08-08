@@ -16,13 +16,12 @@ void NPC::doMove(sf::Time dT)
   float speed = this->speed * dT.asSeconds();
 
   sf::Vector2f diff(this->getPosition() - this->target);
-  float radians = std::atan2(diff.y, diff.x);
-  float rotation = radians * 180 / 3.142;
+  float rotation = std::atan2(diff.y, diff.x);
 
-  this->setRotation(rotation);
+  this->setRotation(rotation * 180 / 3.142);
 
-  float dX = -std::cos(radians) * speed;
-  float dY = -std::sin(radians) * speed;
+  float dX = -std::cos(rotation) * speed;
+  float dY = -std::sin(rotation) * speed;
   this->move(dX, dY);
 }
 

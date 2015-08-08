@@ -8,6 +8,8 @@ public:
     Entity();
     void load(std::string filename);
     ~Entity();
+    sf::RectangleShape getHitbox();
+    sf::RectangleShape hitbox;
 private:
     sf::Texture texture;
 protected:
