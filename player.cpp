@@ -3,35 +3,28 @@
 
 Player::Player()
 {
+    this->boost = false;
+
   this->movingUp = false;
   this->movingDown = false;
   this->movingLeft = false;
   this->movingRight = false;
 
-  this->boost = false;
 }
 
 void Player::handleInput()
 {
-  movingUp = sf::Keyboard::isKeyPressed(sf::Keyboard::W);
-  movingDown = sf::Keyboard::isKeyPressed(sf::Keyboard::S);
-  movingLeft = sf::Keyboard::isKeyPressed(sf::Keyboard::A);
-  movingRight = sf::Keyboard::isKeyPressed(sf::Keyboard::D);
+  this->movingUp = sf::Keyboard::isKeyPressed(sf::Keyboard::W);
+  this->movingDown = sf::Keyboard::isKeyPressed(sf::Keyboard::S);
+  this->movingLeft = sf::Keyboard::isKeyPressed(sf::Keyboard::A);
+  this->movingRight = sf::Keyboard::isKeyPressed(sf::Keyboard::D);
 
-  boost = sf::Keyboard::isKeyPressed(sf::Keyboard::LShift);
-  boost = sf::Keyboard::isKeyPressed(sf::Keyboard::RShift);
-
+  this->boost = sf::Keyboard::isKeyPressed(sf::Keyboard::LShift);
+  this->boost = sf::Keyboard::isKeyPressed(sf::Keyboard::RShift);
 }
 
-void Player::update()
+void Player::doMove()
 {
-
-  // DELETE ME!
-  std::cout << this->movingUp << ":" << this->movingDown << ":" << this->movingLeft << ":" << this->movingRight << ":" << this->boost << std::endl;
-
-  float speed = (this->boost) ? 4.f : 2.f;
-
-  // TODO: Fix boost UL + DL
   if (this->movingUp && this->movingRight)
     {
       this->move(speed, -speed);
@@ -72,7 +65,12 @@ void Player::update()
       this->move(speed, 0);
       this->setRotation(90);
     }
+}
 
+void Player::update()
+{
+  this->speed = (this->boost) ? 1.5f : 1.f;
+  this->doMove();
 }
 
 

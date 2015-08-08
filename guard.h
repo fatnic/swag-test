@@ -1,9 +1,12 @@
 #pragma once
 
-#include "entity.h"
+#include "npc.h"
 
-class Guard : public Entity
+class Guard : public NPC
 {
 public:
     Guard();
+    void update();
+private:
+  bool boost;
 };

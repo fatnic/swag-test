@@ -14,7 +14,8 @@ HEADERS += \
     player.h \
     entity.h \
     guard.h \
-    pause.h
+    pause.h \
+    npc.h
 
 SOURCES += \
     game.cpp \
@@ -24,5 +25,6 @@ SOURCES += \
     player.cpp \
     entity.cpp \
     guard.cpp \
-    pause.cpp
+    pause.cpp \
+    npc.cpp
 

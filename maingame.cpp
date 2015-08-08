@@ -6,12 +6,10 @@ MainGame::MainGame(Game* game)
     this->game = game;
 
     this->player.load("assets/theguy.png");
-    this->player.setPosition(this->game->window.getSize().x/2, this->game->window.getSize().y/2);
+    this->player.setPosition(this->game->window.getSize().x / 2, this->game->window.getSize().y / 2);
 
     this->guard.load("assets/guard.png");
-    this->guard.setPosition(this->player.getPosition().x, this->player.getPosition().y-100);
-    this->guard.scale(0.8f, 0.8f);
-    this->guard.setRotation(180);
+    this->guard.setPosition(760, 10);
 }
 
 void MainGame::draw()
@@ -30,16 +28,16 @@ void MainGame::handleInput()
   while(this->game->window.pollEvent(event))
   {
 
-      if (event.key.code == sf::Keyboard::Escape) this->game->pushState(new Pause(this->game));
-      break;
-
       switch(event.type)
       {
       case sf::Event::Closed:
           game->window.close();
           break;
-      default: break;
+      case sf::Event::KeyPressed:
+          if (event.key.code == sf::Keyboard::Escape) this->game->pushState(new Pause(this->game));
+          break;
       }
+
   }
   return;
 }
@@ -47,4 +45,6 @@ void MainGame::handleInput()
 void MainGame::update()
 {
   this->player.update();
+  this->guard.setTarget(this->player.getPosition());
+  this->guard.update();
 }

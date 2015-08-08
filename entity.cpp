@@ -3,7 +3,7 @@
 
 Entity::Entity()
 {
-
+  this->speed = 1.f;
 }
 
 void Entity::load(std::string filename)

@@ -10,4 +10,8 @@ public:
     ~Entity();
 private:
     sf::Texture texture;
+protected:
+    float speed;
+
+
 };
