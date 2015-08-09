@@ -3,6 +3,7 @@
 
 Player::Player()
 {
+  this->load("assets/theguy.png");
   this->boost = false;
 
   this->movingUp = false;
@@ -64,6 +65,18 @@ void Player::doMove()
     {
       this->move(speed, 0);
       this->setRotation(90);
+  }
+}
+
+bool Player::checkWallCollision(Wall *wall)
+{
+  if (this->getGlobalBounds().intersects(wall->getGlobalBounds()))
+    {
+      wall->setFillColor(sf::Color::Red);
+    }
+  else
+    {
+      wall->setFillColor(sf::Color::Green);
     }
 }
 

@@ -3,6 +3,7 @@
 
 Guard::Guard()
 {
+  this->load("assets/guard.png");
   this->boost = false;
 }
 
