@@ -2,9 +2,9 @@
 *.pro.user
 build
 *.sln
-swag-test.vcxproj
+*.vcxproj
 *.filters
-swag-test.vcxproj.user
+*.vcxproj.user
 *.sdf
-swag-test.opensdf
+*.opensdf
 *.suo
