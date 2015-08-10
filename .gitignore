@@ -9,3 +9,5 @@ build
 *.opensdf
 *.suo
 *.dll
+x64
+Debug

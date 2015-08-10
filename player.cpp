@@ -78,6 +78,8 @@ bool Player::checkWallCollision(Wall *wall)
     {
       wall->setFillColor(sf::Color::Green);
     }
+
+  return true;
 }
 
 void Player::update(sf::Time dT)
