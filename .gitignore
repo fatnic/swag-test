@@ -1,3 +1,10 @@
 *.pri
 *.pro.user
 build
+*.sln
+swag-test.vcxproj
+*.filters
+swag-test.vcxproj.user
+*.sdf
+swag-test.opensdf
+*.suo
