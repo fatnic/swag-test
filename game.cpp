@@ -49,7 +49,7 @@ void Game::gameLoop()
 
 Game::Game()
 {
-  this->window.create(sf::VideoMode(800,600), "GameWindow");
+  this->window.create(sf::VideoMode(800,600), "Swag");
   this->window.setFramerateLimit(60);
 }
 
