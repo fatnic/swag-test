@@ -13,7 +13,7 @@ MainGame::MainGame(Game* game)
 
   //Use sf::IntRect in the future when loading from tilemap
   Wall wall1(sf::IntRect(0,0,50,400));
-  Wall wall2(sf::IntRect(400,200,100,100));
+  Wall wall2(sf::IntRect(600,200,100,100));
   this->walls.push_back(wall1);
   this->walls.push_back(wall2);
 }

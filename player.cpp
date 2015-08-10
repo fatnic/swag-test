@@ -68,18 +68,29 @@ void Player::doMove()
   }
 }
 
-bool Player::checkWallCollision(Wall *wall)
+void Player::checkWallCollision(Wall *wall)
 {
+  // TODO: This doesn not work!!!
   if (this->getGlobalBounds().intersects(wall->getGlobalBounds()))
     {
+		if (this->movingLeft)
+			this->move(speed, 0);
+
+		if (this->movingRight)
+			this->move(-speed, 0);
+
+		if (this->movingUp)
+			this->move(0, speed);
+
+		if (this->movingDown)
+			this->move(0, -speed);
+
       wall->setFillColor(sf::Color::Red);
     }
   else
     {
       wall->setFillColor(sf::Color::Green);
     }
-
-  return true;
 }
 
 void Player::update(sf::Time dT)

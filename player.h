@@ -11,7 +11,7 @@ public:
   void handleInput();
   void update(sf::Time dT);
   void doMove();
-  bool checkWallCollision(Wall* wall);
+  void checkWallCollision(Wall* wall);
 private:
   bool movingUp;
   bool movingDown;
