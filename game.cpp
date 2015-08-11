@@ -2,8 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 
-#include "game.hpp"
-#include "gamestate.hpp"
+#include "game.h"
+#include "gamestate.h"
 
 
 void Game::pushState(GameState *state)

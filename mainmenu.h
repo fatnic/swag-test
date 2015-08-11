@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "gamestate.hpp"
+#include "gamestate.h"
 
 class MainMenu : public GameState
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game.hpp"
+#include "game.h"
 
 class GameState
 {

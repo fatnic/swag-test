@@ -1,10 +1,12 @@
-#include "maingame.hpp"
-#include "mainmenu.hpp"
+#include "maingame.h"
+#include "mainmenu.h"
 #include "pause.h"
 #include <iostream>
 
-MainGame::MainGame(Game* game)
+MainGame::MainGame(Game* game) : ml("assets/")
 {
+  this->ml.Load("test.tmx");
+
   this->game = game;
 
   this->player.setPosition(this->game->window.getSize().x / 2, this->game->window.getSize().y / 2);
@@ -20,7 +22,8 @@ MainGame::MainGame(Game* game)
 
 void MainGame::draw()
 {
-  for (auto& wall : this->walls) { this->game->window.draw(wall); }
+  this->game->window.draw(this->ml);
+//  for (auto& wall : this->walls) { this->game->window.draw(wall); }
   this->game->window.draw(this->player);
   this->game->window.draw(this->guard);
 

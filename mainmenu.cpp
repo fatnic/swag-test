@@ -1,5 +1,5 @@
-#include "mainmenu.hpp"
-#include "maingame.hpp"
+#include "mainmenu.h"
+#include "maingame.h"
 
 MainMenu::MainMenu(Game *game)
 {

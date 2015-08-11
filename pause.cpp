@@ -1,5 +1,5 @@
 #include "pause.h"
-#include "mainmenu.hpp"
+#include "mainmenu.h"
 
 Pause::Pause(Game *game)
 {
